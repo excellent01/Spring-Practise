@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--
+        Person person = new Person();
+        Class.forName("com.mysql.jdbc.Driver")
+    -->
+
+    <bean id="user" class="com.github.excellent01.User">
+        <property name="id" value="10"/>
+    </bean>
+
+    <bean id="user1" class="com.github.excellent01.User">
+        <constructor-arg value="100"/>
+    </bean>
+
+    <bean id="demo2" class="com.github.excellent01.Demo2">
+        <constructor-arg type="int" value="100"/>
+        <constructor-arg type="int" value="200"/>
+        <constructor-arg type="long" value="100"/>
+        <constructor-arg type="short" value="100"/>
+    </bean>
+
+
+
+    <bean id="demo1" class="com.github.excellent01.SpringDemo1">
+        <property name="name" value="zs"/>
+        <property name="id" value="1"/>
+        <property name="AByte" value="127"/>
+        <property name="flag" value="true"/>
+    </bean>
+
+</beans>
