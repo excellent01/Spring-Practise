@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="collect" class="com.xust.spring.DICollection" lazy-init="true">
+        <property name="strArray">
+           <array>
+               <value>"a"</value>
+               <value>b</value>
+               <value>c</value>
+           </array>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>a</value>
+                <value>a</value>
+                <value>b</value>
+            </set>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="1" value="1"/>
+                <entry key="2" value="2"/>
+                <entry key="null" value="null"/>
+            </map>
+        </property>
+        <property name="list" >
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </property>
+    </bean>
+</beans>
