@@ -16,7 +16,6 @@ public class Demo2 {
     private int num3;
     private long num4;
     public Demo2(){
-
     }
     public Demo2(int num1, short num2, int num3, long num4) {
         this.num1 = num1;

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="user" class="com.github.excellent.di.User">-->
+       <!--<constructor-arg name="age" value="10"/>-->
+        <!--<constructor-arg name="birthday" ref="now"/>-->
+        <!--<constructor-arg name="name" value="Jack"/>-->
+    <!--</bean>-->
+
+    <bean id="user1" class="com.github.excellent.di.User">
+        <property name="name" value="Tom"/>
+        <property name="age" value="10"/>
+        <property name="birthday" ref="now"/>
+    </bean>
+    <bean id="now" class="java.util.Date">
+
+    </bean>
+</beans>

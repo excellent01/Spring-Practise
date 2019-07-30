@@ -13,16 +13,12 @@ public class Bean {
     private ThreadLocal threadLocal;
     private String str;
     private boolean flag;
-
     public Bean(){
 
     }
-
     public static void main(String[] args) {
         BeanConfiger configer = new BeanConfiger();
         Bean beanObject = configer.getBeanObject();
         System.out.println(beanObject);
-
-
     }
 }
