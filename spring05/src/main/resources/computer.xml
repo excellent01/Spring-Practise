@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="computer" class="com.github.excellent.testdi.Computer">
+        <property name="name" value="Mac"/>
+        <property name="proice" value="10000"/>
+    </bean>
+
+    <!--????????id?class-->
+    <bean id="computerFactory" class="com.github.excellent.testdi.ComputerFactory">
+
+    </bean>
+
+    <!--???????????bean???????-->
+    <bean id="computers" factory-bean="computerFactory" factory-method="getInstance">
+
+    </bean>
+
+    <!--????-->
+    <bean id="computerss" class="com.github.excellent.testdi.StaticComputerFactory" factory-method="getComputer">
+
+    </bean>
+</beans>

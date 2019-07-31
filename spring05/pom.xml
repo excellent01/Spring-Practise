@@ -4,8 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.xust.spring</groupId>
-    <artifactId>spring04</artifactId>
+
+    <groupId>com.xust</groupId>
+    <artifactId>spring05</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 
@@ -17,12 +18,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!--spring core
-            spring beans
-            spring context
-            spring aop
-
-        -->
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -65,4 +60,5 @@
         </dependency>
 
     </dependencies>
+
 </project>

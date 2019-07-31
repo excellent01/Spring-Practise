@@ -4,7 +4,6 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-
 import javax.annotation.Resource;
 import java.util.Map;
 
@@ -15,7 +14,6 @@ import java.util.Map;
 @Data
 @Component
 public class Bean {
-
     private String[] arr;
 //    @Autowired
 //    @Qualifier(value = "user")
