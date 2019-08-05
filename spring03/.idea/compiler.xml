@@ -9,5 +9,8 @@
         <module name="spring03" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="comexcellent" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

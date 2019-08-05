@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Test {
     public static void main(String[] args) {
-       ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
         //AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         RealSubject realSubject = (RealSubject) context.getBean("readsubject");
         realSubject.add();

@@ -14,7 +14,6 @@ public class RealSubject implements ISubject {
     public void work1() {
         System.out.println("执行真实业务1...");
     }
-
     public void work2() {
         System.out.println("执行真实业务2...");
     }

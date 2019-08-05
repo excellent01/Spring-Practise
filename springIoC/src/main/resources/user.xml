@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="date" class="java.util.Date">
+        <property name="year" value="2000"/>
+        <property name="month" value="1"/>
+        <property name="date" value="1"/>
+    </bean>
+
+
+    <bean id="user" class="com.xust.excellent.review.User">
+        <constructor-arg >
+            <idref bean="date"/>
+        </constructor-arg>
+    </bean>
+
+
+
+</beans>

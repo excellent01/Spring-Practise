@@ -18,7 +18,7 @@ import java.lang.reflect.Proxy;
  */
 @Aspect
 @Component(value = "proxySubject")
-@Configuration
+//@Configuration
 public class ProxySubject  {
 
     /**
@@ -28,6 +28,9 @@ public class ProxySubject  {
     private void pointCut(){
     }
 
+    /**
+     * 横切关注点
+     */
     @Before("pointCut()")
     public void checkBefore(){
         System.out.println("真正业务执行之前....");
