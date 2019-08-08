@@ -2,6 +2,7 @@ package com.xust.spring;
 import lombok.Data;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 /**
@@ -16,6 +17,7 @@ public class DICollection {
     private List<Integer> list;
     private Set set;
     private Map<String,String> map;
+    private Properties properties;
     public DICollection(){
     }
 }

@@ -9,10 +9,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("aop2.xml");
-        System.out.println( context.getBean("proxy").getClass().getName());
-        System.out.println(context.getBean("real").getClass().getName());
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("aop2.xml");
+
+        // com.sun.proxy.$Proxy7
         RealSubject bean = (RealSubject) context.getBean("real");
+
         bean.work1();
         bean.work2();
     }

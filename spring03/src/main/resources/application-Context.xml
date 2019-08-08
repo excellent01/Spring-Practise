@@ -36,5 +36,12 @@
                 <value>3</value>
             </list>
         </property>
+
+        <property name="properties">
+            <props>
+                <prop key="anem">Jack</prop>
+                <prop key="pwd">123</prop>
+            </props>
+        </property>
     </bean>
 </beans>

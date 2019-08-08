@@ -1,5 +1,4 @@
 package com.github.excellent01.annoaop;
-
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 

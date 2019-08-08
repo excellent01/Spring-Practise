@@ -1,7 +1,6 @@
 package com.github.excellent.testdi;
 
 import lombok.Data;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,8 +8,7 @@ import org.springframework.stereotype.Component;
  * @date 2019/7/31 21:49
  */
 @Data
-@Component(value = "computer")
-@ComponentScan(value = "com.github.excellent.testdi")
+@Component
 public class Computer {
     private String name;
     private double proice;
