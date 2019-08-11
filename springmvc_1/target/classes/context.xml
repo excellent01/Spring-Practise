@@ -17,10 +17,12 @@
         http://www.springframework.org/schema/util/spring-util.xsd">
 
 
-    <!--自动扫描-->
+    <!--自动扫描包-->
     <context:component-scan base-package="com.github.excellent.controller"/>
-    <!--mvc注解-->
+
+    <!--开启mvc注解 -->
     <mvc:annotation-driven/>
+
     <!--视图解析器-->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>

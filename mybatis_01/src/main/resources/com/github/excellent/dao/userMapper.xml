@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--映射关系 对象和数据库的表-->
+<!--namespace is important-->
+<mapper namespace="com.github.excellent.dao.IUserDao">
+
+    <select id="findAll"  resultType="com.github.excellent.User">
+        select * from user where ;
+    </select>
+
+    <!--根据id进行查询-->
+    <select id="queryUserById" parameterType="int" resultType="com.github.excellent.User">
+        select * from user where id = #{value }
+    </select>
+
+    <!--根据名称进行模糊查询-->
+    <!-- -->
+    <select id="queryUserByName" parameterType="java.lang.String" resultType="com.github.excellent.User">
+        SELECT * FROM USER WHERE username LIKE '%${value}%';
+       --SELECT * FROM USER WHERE username LIKE #{value};
+    </select>
+
+
+    <!--添加用户-->
+    <select id="insertUser" parameterType="com.github.excellent.User" >
+        insert into user values(#{id},#{username},#{birthday},#{sex});
+    </select>
+
+    <!--修改-->
+    <select id="update" parameterType="com.github.excellent.User">
+        UPDATE USER SET username = #{username} WHERE id = #{id};
+    </select>
+
+    <!--删除-->
+    <select id="delete" parameterType="int">
+        delete from user where id = #{value };
+    </select>
+
+
+</mapper>
