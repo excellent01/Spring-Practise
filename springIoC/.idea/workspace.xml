@@ -13,25 +13,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review/User.java">
+      <file leaf-file-name="TestDate.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/xust/excellent/TestDate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="462">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review/Test.java">
+      <file leaf-file-name="ConvertDate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review/ConvertDate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            <state relative-caret-position="22">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/user.xml">
+      <file leaf-file-name="bean.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/bean.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="176">
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -79,6 +79,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/xust/excellent/review/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xust/excellent/review/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/user.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xust/excellent/review/Bean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xust/excellent/review/ConvertDate.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/bean.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xust/excellent/TestDate.java" />
       </list>
     </option>
   </component>
@@ -134,7 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -174,13 +178,43 @@
               <item name="springIoC" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="excellent" type="462c0819:PsiDirectoryNode" />
+              <item name="review" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springIoC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springIoC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springIoC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springIoC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springIoC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springIoC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springIoC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springIoC" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="excellent" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="JUnit.TestDate">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xust.excellent.review.Test" />
       <module name="springIoC" />
@@ -221,29 +255,6 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="BeanTest.testtoString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springIoC" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xust.excellent.injection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.xust.excellent" />
-      <option name="MAIN_CLASS_NAME" value="com.xust.excellent.BeanTest" />
-      <option name="METHOD_NAME" value="testtoString" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="HelloSpringTest.testPrint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springIoC" />
       <extension name="coverage">
@@ -257,6 +268,52 @@
       <option name="PACKAGE_NAME" value="com.xust.excellent" />
       <option name="MAIN_CLASS_NAME" value="com.xust.excellent.HelloSpringTest" />
       <option name="METHOD_NAME" value="testPrint" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springIoC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xust.excellent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.xust.excellent" />
+      <option name="MAIN_CLASS_NAME" value="com.xust.excellent.TestDate" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TestDate.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springIoC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xust.excellent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.xust.excellent" />
+      <option name="MAIN_CLASS_NAME" value="com.xust.excellent.TestDate" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -330,16 +387,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.HelloSpringTest.testPrint" />
-      <item itemvalue="JUnit.BeanTest.testtoString" />
       <item itemvalue="JUnit.User.test" />
       <item itemvalue="Application.Test" />
+      <item itemvalue="JUnit.TestDate.test" />
+      <item itemvalue="JUnit.TestDate" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestDate" />
+        <item itemvalue="JUnit.TestDate.test" />
         <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.User.test" />
         <item itemvalue="JUnit.HelloSpringTest.testPrint" />
-        <item itemvalue="JUnit.BeanTest.testtoString" />
       </list>
     </recent_temporary>
   </component>
@@ -362,25 +421,11 @@
       <workItem from="1564568796510" duration="11000" />
       <workItem from="1564642085003" duration="12000" />
       <workItem from="1565002473286" duration="3550000" />
+      <workItem from="1565439504390" duration="1577000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BeanTest_testtoString - 2019.07.25 at 22h 18m 21s.xml">
-      <configuration name="BeanTest.testtoString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BeanTest_testtoString - 2019.07.25 at 22h 18m 42s.xml">
-      <configuration name="BeanTest.testtoString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BeanTest_testtoString - 2019.07.25 at 22h 19m 15s.xml">
-      <configuration name="BeanTest.testtoString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HelloSpringTest_testPrint - 2019.07.25 at 22h 32m 14s.xml">
-      <configuration name="HelloSpringTest.testPrint" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HelloSpringTest_testPrint - 2019.07.25 at 22h 40m 38s.xml">
-      <configuration name="HelloSpringTest.testPrint" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HelloSpringTest_testPrint - 2019.07.25 at 22h 43m 00s.xml">
       <configuration name="HelloSpringTest.testPrint" configurationId="JUnit" />
     </history-entry>
@@ -396,9 +441,24 @@
     <history-entry file="User_test - 2019.07.27 at 20h 41m 06s.xml">
       <configuration name="User.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestDate_test - 2019.08.10 at 20h 26m 09s.xml">
+      <configuration name="TestDate.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDate - 2019.08.10 at 20h 33m 19s.xml">
+      <configuration name="TestDate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDate - 2019.08.10 at 20h 37m 35s.xml">
+      <configuration name="TestDate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDate - 2019.08.10 at 20h 37m 53s.xml">
+      <configuration name="TestDate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestDate - 2019.08.10 at 20h 38m 38s.xml">
+      <configuration name="TestDate" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12161000" />
+    <option name="totallyTimeSpent" value="13738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -413,12 +473,12 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38265306" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36564627" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2806354" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28517398" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -441,6 +501,33 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/user.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application-acontext-demo1.XML">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -676,35 +763,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        <state relative-caret-position="264">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/user.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="22">
+          <caret line="1" column="47" lean-forward="true" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review/Bean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xust/excellent/review/ConvertDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bean.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/xust/excellent/TestDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
