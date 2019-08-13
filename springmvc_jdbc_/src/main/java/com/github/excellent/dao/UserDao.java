@@ -2,6 +2,7 @@ package com.github.excellent.dao;
 
 import com.github.excellent.po.User;
 import com.github.excellent.utils.JDBCUtils;
+import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,8 +15,9 @@ import java.util.List;
  * @auther plg
  * @date 2019/8/12 9:03
  */
+@Component
 public class UserDao {
-    private Connection connection = null;
+    private Connection connection ;
     public UserDao(){
         connection = JDBCUtils.getConnection();
     }
@@ -46,11 +48,4 @@ public class UserDao {
         return null;
     }
 
-    public static void main(String[] args) {
-        UserDao dao = new UserDao();
-        List<User> list = dao.queryuser();
-        for(User user : list){
-            System.out.println(user);
-        }
-    }
 }

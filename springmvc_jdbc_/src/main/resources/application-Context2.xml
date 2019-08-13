@@ -16,18 +16,9 @@
         http://www.springframework.org/schema/util
         http://www.springframework.org/schema/util/spring-util.xsd">
 
+    <context:component-scan base-package="com.github.excellent"/>
+    <mvc:annotation-driven/>
 
-    <!--映射器-->
-    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
-
-    <!--适配器-->
-    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
-
-    <!--namae  url 访问的路径-->
-    <!--处理器-->
-    <bean id="controller" name="/showuser" class="com.github.excellent.controller.UserController"/>
-
-    <!--视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="jsp/"/>

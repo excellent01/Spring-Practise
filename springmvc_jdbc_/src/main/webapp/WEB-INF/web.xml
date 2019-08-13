@@ -12,7 +12,7 @@
         <!--参数配置-->
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:application-Context1.xml</param-value>
+            <param-value>classpath:application-Context2.xml</param-value>
         </init-param>
 
     </servlet>
