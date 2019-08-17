@@ -14,5 +14,16 @@
     <a href="/test?username=tom&password=123">参数配置1</a><br>
     <a href="/jsp/user.jsp">参数配置2</a><br>
     <a href="/jsp/person.jsp">参数配置3</a><br>
+
+    <a href="/test4?username=潘立刚">参数配置4</a><br>
+
+    <a href="/jsp/requestBody.jsp">请求体获取</a><br>
+
+    <a href="/test6/10">PathVariable</a><br>
+    <a href="/test7">请求头</a><br>
+    <a href="/test8">CookValue</a><br>
+    <a href="/test9">ModuleAttribute</a><br>
+
+
 </body>
 </html>

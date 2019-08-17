@@ -44,11 +44,13 @@
         </dependency>
     </dependencies>
 
+    <!-- 放置资源文件-->
     <build>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>
+                    <!--**匹配所有-->
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
                     <include>**/*.yml</include>
@@ -64,8 +66,5 @@
                 </includes>
             </resource>
         </resources>
-
-
-
     </build>
 </project>
