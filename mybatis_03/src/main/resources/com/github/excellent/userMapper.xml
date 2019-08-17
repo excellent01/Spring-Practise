@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.excellent.User1Maper">
+
+
+
+    <!--Sql片段-->
+    <sql id="mySql">
+        <foreach collection="list" item="i" open="and (" close=")" separator="or">
+            id = #{i}
+        </foreach>
+    </sql>
+
+
+
+
+
+
+    <insert id="insert" parameterType="User">
+
+        <selectKey keyProperty="id" resultType="Integer" order="AFTER">
+            SELECT LAST_INSERT_ID();
+        </selectKey>
+        insert into user (id,username,birthday,sex) value (#{id},#{username},#{birthday},#{sex});
+    </insert>
+
+    <select id="selectById" parameterType="Integer" resultType="com.github.excellent.User">
+        select * from user where id > #{id};
+    </select>
+
+    <insert id="add" parameterType="User">
+
+        <selectKey keyProperty="id" resultType="Integer" order="AFTER" >
+            SELECT LAST_INSERT_ID();
+        </selectKey>
+        insert into user(id,username,birthday,sex) value (#{id},#{username},#{birthday},#{sex})
+
+    </insert>
+
+
+    <update id="update" parameterType="User">
+        update user set username = #{username},sex = #{sex},birthday = #{birthday}  where id = #{id};
+    </update>
+
+    <delete id="delete" parameterType="User">
+        delete from user where id = #{id};
+    </delete>
+
+    <select id="selectByIdd" parameterType="com.github.excellent.User" resultType="com.github.excellent.User">
+        select
+                *
+        from
+              user
+        <where>
+            <if test="user != null">
+                <if test="user.id != null">
+                   and  user.id &gt; #{user.id};
+                </if>
+            </if>
+
+        </where>
+    </select>
+
+
+    <select id="selectMore" parameterType="User" resultType="User">
+          SELECT * FROM USER
+            <where>
+                <include refid="mySql"/>
+            </where>
+    </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>
