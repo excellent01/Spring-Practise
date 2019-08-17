@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--接口文件和映射文件的目录结构相同，映射文件的mapper的namespace里面写接口全路径-->
+
+<mapper namespace="com.github.excellent.dao.UserDao">
+
+    <!-- id  唯一标识 和 当前接口的方法名称一致-->
+
+    <!--resultType  返回类型-->
+    <select id="findAll" resultType="com.github.excellent.domain.User">
+        select * from user
+    </select>
+
+
+    <!--
+        parameterType : 输入映射 和接口的方法参数保持一致
+        基本类型 ： 可以写基本类型也可以写包装类
+        引用类型 ： 当前类的全路径名称
+
+        mybatis 支持
+            #{和实体类的属性一致}
+    -->
+    <select id="saveUser" parameterType="com.github.excellent.domain.User">
+        insert into user (id,username,birthday,sex) value (#{id},#{username},#{birthday},#{sex});
+    </select>
+
+
+    <!--mybatis的模糊查询-->
+    <select id="query" parameterType="String" resultType="com.github.excellent.domain.User">
+        <!--
+                #{}  占位符
+                ${}: 字符串拼接符
+        -->
+        <!-- select * from user where username like #{value };-->
+        select * from user where username like '%${value }%'
+    </select>
+
+</mapper>
