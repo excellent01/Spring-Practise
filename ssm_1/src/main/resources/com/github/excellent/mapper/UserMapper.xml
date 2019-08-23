@@ -12,6 +12,21 @@
         <result column="address" property="userAddr"/>
     </resultMap>
 
+    <update id="updateuser" parameterType="com.github.excellent.po.User">
+        update user
+        <set>
+            <if test="user != null">
+                <if test="user.birthday != null">
+                    birthday = #{user.birthday},
+                </if>
+                <if test="user.userAddr!=null">
+                     address = #{user.userAddr}
+                </if>
+            </if>
+
+        </set>
+    </update>
+
 
     <select id="findAll" resultMap="map1">
         select * from user;
@@ -19,7 +34,13 @@
 
 
     <select id="BlurSearch" parameterType="com.github.excellent.po.User" resultMap="map1">
-        select * from user where id > #{userId};
+        select * from user
+        <where>
+            <if test="user!=null">
+                id &gt; #{user.userId}
+            </if>
+        </where>
+
     </select>
 
 </mapper>

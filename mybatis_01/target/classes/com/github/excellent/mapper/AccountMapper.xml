@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.excellent.mapper.AccountMapper">
+
+    <insert id="insert" parameterType="Account">
+        insert into account (name,balance) value (#{name},#{balance})
+    </insert>
+
+    <select id="select" resultType="Account">
+        select id,name ,balance from account
+    </select>
+    <select id="selectById" parameterType="int" resultType="com.github.excellent.dao.Account">
+        select * from account where id = #{value}
+    </select>
+    <select id="seelctByMap" parameterType="map" resultType="com.github.excellent.dao.Account">
+        select * from account where name like concat{'%', #{name}, '%'}
+    </select>
+    <select id="seelctByJavaBean" parameterType="Account" resultType="com.github.excellent.dao.Account">
+        select * from account where name=#{name} and id=#{id}
+    </select>
+
+</mapper>

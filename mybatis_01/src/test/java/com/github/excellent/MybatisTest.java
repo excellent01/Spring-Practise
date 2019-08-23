@@ -1,123 +1,83 @@
-package com.github.excellent;;
+package com.github.excellent;
+
+import com.github.excellent.dao.Account;
+import com.github.excellent.mapper.AccountMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Before;
 import org.junit.Test;
+
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-
-/**
- * @auther plg
- * @date 2019/8/11 11:36
- */
-
-/**
- *
- * Mybatis API
- *
- * SqlSeesionFactory  :  重量级对象，一个该对象代表一个数据库，创建SqlSession对象
- * SqlSession  ： Connection 的封装 轻量级对象
- *、
- */
-public class MybatisTest {
-
-    private SqlSessionFactory  sqlSessionFactory = null;
-
+public class MybatisTest{
+    private SqlSessionFactory factory = null;
     @Before
-    public void testInit(){
+    public void init(){
         InputStream in = null;
         try {
             in = Resources.getResourceAsStream("SqlMapConfig.xml");
-            sqlSessionFactory = new SqlSessionFactoryBuilder().build(in);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        factory = new SqlSessionFactoryBuilder().build(in);
     }
-
     @Test
-    public void testQueerById(){
-        SqlSession sqlSession = sqlSessionFactory.openSession();
-        User user = sqlSession.selectOne("com.github.excellent.dao.IUserDao.queryUserById",1);
-        System.out.println(user);
+    public void test1(){
+        SqlSession sqlSession = factory.openSession();
+        AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
+        Account account = new Account();
+        account.setBalance("3000");
+        account.setName("ddd");
+        mapper.insert(account);
+        sqlSession.commit();
         sqlSession.close();
-
+    }
+    @Test
+    public void test2(){
+        SqlSession sqlSession = factory.openSession();
+        AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
+        List<Account> list = mapper.select();
+        for(Account account1 : list){
+            System.out.println(account1);
+        }
+        sqlSession.close();
     }
 
+    @Test
+    public void test3(){
+        SqlSession sqlSession = factory.openSession();
+        AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
+        Account account = mapper.selectById(2);
+        System.out.println(account);
+        sqlSession.close();
+    }
 
     @Test
-    public void testQueerByName(){
-        SqlSession sqlSession = sqlSessionFactory.openSession();
-        List<User> list = sqlSession.selectList("com.github.excellent.dao.IUserDao.queryUserByName","t");
+    public void test4(){
+        SqlSession sqlSession = factory.openSession();
+        AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
+        Map<String,String> map = new HashMap<>();
+        map.put("name","cc");
+        List<Account> list = mapper.seelctByMap(map);
         System.out.println(list);
         sqlSession.close();
-
     }
 
-
-
     @Test
-    public void insertUser(){
-        User user = new User();
-        user.setId(5);
-        user.setUsername("ls");
-        user.setBirthday("2010-03-03");
-        user.setSex('男');
-        SqlSession sqlSession = sqlSessionFactory.openSession();
-        int count = sqlSession.insert("com.github.excellent.dao.IUserDao.insertUser",user);
-        // 提交事务
-        sqlSession.commit();
-        System.out.println(count);
+    public void test5(){
+        SqlSession sqlSession = factory.openSession();
+        AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
+        Account account = new Account();
+        account.setName("ccc");
+        account.setId(3);
+        List<Account> list = mapper.seelctByJavaBean(account);
+        System.out.println(list);
         sqlSession.close();
     }
-
-
-    @Test
-    public void updateUser(){
-        User user = new User();
-        user.setId(4);
-        user.setUsername("ls");
-        SqlSession sqlSession = sqlSessionFactory.openSession();
-        int count = sqlSession.update("com.github.excellent.dao.IUserDao.update",user);
-        // 提交事务
-        sqlSession.commit();
-        System.out.println(count);
-        sqlSession.close();
-    }
-
-
-    @Test
-    public void testDelete(){
-        SqlSession sqlSession = sqlSessionFactory.openSession();
-        int count = sqlSession.delete("com.github.excellent.dao.IUserDao.delete", 1);
-        sqlSession.commit();
-        System.out.println(count);
-    }
-
-
-//    public static void main(String[] args) throws IOException {
-//
-//        // 1 读取配置文件
-//        InputStream in = Resources.getResourceAsStream("SqlMapConfig.xml");
-//        // 2 创建SqlSessionFactory工厂
-//        SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-//        SqlSessionFactory factory = builder.build(in);
-//        // 3 使用工厂产生SqlSession对象
-//        SqlSession sqlSession = factory.openSession();
-//
-//        // 4 使用session创建dao接口的代理对象
-//        IUserDao userDao = sqlSession.getMapper(IUserDao.class);
-//
-//        // 5 使用代理对象执行方法
-//        List<User> list = userDao.findAll();
-//        for(User u : list){
-//            System.out.println(u);
-//        }
-//        sqlSession.close();
-//        in.close();
-//    }
 }
-

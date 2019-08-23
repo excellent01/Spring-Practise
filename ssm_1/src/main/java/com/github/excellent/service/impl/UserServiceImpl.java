@@ -7,9 +7,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.springframework.stereotype.Service;
-
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -49,15 +49,5 @@ public class UserServiceImpl implements IUserService {
         }
         sqlSession.close();
         return list;
-    }
-
-    public static void main(String[] args) throws Exception {
-        UserServiceImpl userService = new UserServiceImpl();
-        User user = new User();
-        user.setUserId(10);
-        List<User> list = userService.BlurSearch(user);
-        for(User user1 : list){
-            System.out.println(user1);
-        }
     }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+    <!--为实体类设置别名-->
+    <typeAliases>
+        <package name="com.excellent.po"/>
+    </typeAliases>
+
+    <environments default="dev">
+        <environment id="dev">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+                <property name="username" value="root"/>
+                <property name="password" value="like12345"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+
+    <!--映射配置文件-->
+    <mappers>
+        <!--<mapper resource="com/excellent/mapper/ordersMapper.xml"/>-->
+        <!--<mapper resource="com/excellent/mapper/UserMapper.xml"/>-->
+        <package name="com.excellent.mapper"/>
+    </mappers>
+</configuration>

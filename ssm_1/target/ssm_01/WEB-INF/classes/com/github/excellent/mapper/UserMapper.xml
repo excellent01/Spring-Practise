@@ -19,7 +19,13 @@
 
 
     <select id="BlurSearch" parameterType="com.github.excellent.po.User" resultMap="map1">
-        select * from user where id > #{userId};
+        select * from user
+        <where>
+            <if test="user!=null">
+                id &gt; #{user.userId}
+            </if>
+        </where>
+
     </select>
 
 </mapper>

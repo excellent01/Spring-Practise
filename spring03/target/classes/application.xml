@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--<aop:aspectj-autoproxy/>-->
+
+    <bean id="user1" class="com.xust.spring.review.Userimpl">
+
+    </bean>
+
+    <bean id="user2" class="com.xust.spring.review.Userimpl">
+
+    </bean>
+
+    <bean id="user3" class="com.xust.spring.review.IUserFactory" factory-method="getInstance">
+
+    </bean>
+
+    <bean id="factory" class="com.xust.spring.review.IUserFactory2">
+
+    </bean>
+    <bean id="user4" factory-bean="factory" factory-method="getInstance">
+
+    </bean>
+</beans>

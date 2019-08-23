@@ -2,7 +2,10 @@ package com.github.excellent.po;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class User {
 
@@ -70,4 +73,5 @@ public class User {
                 ", userAddr='" + userAddr + '\'' +
                 '}';
     }
+
 }

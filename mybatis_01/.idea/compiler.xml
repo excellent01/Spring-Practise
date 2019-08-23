@@ -9,5 +9,8 @@
         <module name="mybaties_01" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatis_1_1" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

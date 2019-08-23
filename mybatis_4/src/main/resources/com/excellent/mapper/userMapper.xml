@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.excellent.mapper.UserMapper">
+
+
+    <sql id="mysql1">
+        select * from user
+    </sql>
+
+    <insert id="adduser" parameterType="com.excellent.po.User">
+        update user
+        <set>
+            <if test="user.sex != null">
+                 sex = #{user.sex}
+            </if>
+            <if test="user.username != null">
+                and username = #{user.username}
+            </if>
+        </set>
+                where id = #{user.id}
+    </insert>
+
+    <insert id="insertUser" parameterType="com.excellent.po.User" keyProperty="id" >
+        <selectKey resultType="java.lang.Long" keyProperty="autoId" order="AFTER" >
+        SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into User (username) values(#{user.username})
+    </insert>
+
+    <select id="findById" parameterType="java.util.ArrayList" resultType="java.util.Map">
+
+        <!--
+            select * from user where id in (1,10,16,22)
+            collection：指定输入 对象中集合属性
+            item：每个遍历生成对象中
+            open：开始遍历时拼接的串
+            close：结束遍历时拼接的串
+            separator：遍历的两个对象中需要拼接的串
+        -->
+
+        SELECT *
+        FROM user
+        WHERE id in
+        <foreach item="i"  collection="list" open="("
+                 separator="," close=")">
+            #{i}
+        </foreach>
+
+    </select>
+    
+    
+    
+    <select id="find" parameterType="com.excellent.po.User" resultType="com.excellent.po.User">
+        select * from user
+        <where>
+            <if test="user != null">
+                <if test="user.id != null">
+                    AND id &gt; #{user.id}
+                </if>
+                <if test="user.sex != null">
+                    AND sex = #{user.sex}
+                </if>
+            </if>
+        </where>
+    </select>
+    <select id="findAll" resultType="com.excellent.po.User">
+        <include refid="mysql1"/>
+    </select>
+    <select id="search" resultType="com.excellent.po.User" flushCache="false">
+        select * from user
+        <where>
+            <if test="id != null">
+                id = #{id};
+            </if>
+        </where>
+    </select>
+
+
+</mapper>
