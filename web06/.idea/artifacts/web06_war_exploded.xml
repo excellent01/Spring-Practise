@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="web06:war exploded">
+    <output-path>D:/Tomcat/apache-tomcat-8.5.39/webapps/filter</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="web06" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="web06/web/Web" />
+    </root>
+  </artifact>
+</component>

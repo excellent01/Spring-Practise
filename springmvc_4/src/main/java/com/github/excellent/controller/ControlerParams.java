@@ -11,7 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ControlerParams {
     @RequestMapping("/test")
-    public ModelAndView test(String username,String password){
+    // 提交的参数名称和方法参数名称相同,与参数顺序无关
+    public ModelAndView test(String password,String username){
         System.out.println(username);
         System.out.println(password);
         ModelAndView modelAndView = new ModelAndView();
@@ -20,6 +21,7 @@ public class ControlerParams {
     }
 
     @RequestMapping("/test2")
+    // 封装javaBean，要求参数名称和javaBean属性相同
     public ModelAndView test(User user){
         ModelAndView modelAndView = new ModelAndView();
         System.out.println(user);
@@ -37,6 +39,7 @@ public class ControlerParams {
     }
 
     @RequestMapping("/test4")
+    // @RequestParam 解决参数名称不匹配的问题
     public ModelAndView test(@RequestParam(value = "username") String user){
         ModelAndView modelAndView = new ModelAndView();
         System.out.println(user);
@@ -45,6 +48,7 @@ public class ControlerParams {
     }
 
     @RequestMapping("/test5")
+    // 获取请求体中的数据
     public ModelAndView test5(@RequestBody (required = true) String body){
         ModelAndView modelAndView = new ModelAndView();
         System.out.println(body);
@@ -61,7 +65,8 @@ public class ControlerParams {
     }
 
     @RequestMapping("/test7")
-    public ModelAndView test7(@RequestHeader(value = "Connection") String header){
+    // 请求头中的数据
+    public ModelAndView test7(@RequestHeader(value = "Hosti") String header){
         ModelAndView modelAndView = new ModelAndView();
         System.out.println(header);
         modelAndView.setViewName("test");

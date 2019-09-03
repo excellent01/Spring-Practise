@@ -23,6 +23,8 @@
     <a href="/test7">请求头</a><br>
     <a href="/test8">CookValue</a><br>
     <a href="/test9">ModuleAttribute</a><br>
+    <a href="/abc/ab">测试</a><br>
+    <a href="/jsp/upload.jsp">文件上传</a><br>
 
 
 </body>

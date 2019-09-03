@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 @Component
 
 public class User {
+
     @Autowired
     private Computer computer;
     @Value("100")

@@ -8,6 +8,8 @@
 
     <settings>
         <setting name="lazyLoadingEnabled" value="true"/>
+        <!--开启二级缓存总开关，默认为true-->
+        <setting name="cacheEnabled" value="true"/>
     </settings>
 
     <typeAliases>

@@ -9,6 +9,12 @@ import org.springframework.web.servlet.ModelAndView;
  * @date 2019/8/13 17:38
  */
 @Controller
+@RequestMapping("/abc")
 public class ControllerParams2 {
-
+    @RequestMapping("/ab")
+    public ModelAndView test(){
+        ModelAndView modelAndView =  new ModelAndView();
+        modelAndView.setViewName("test");
+        return modelAndView;
+    }
 }

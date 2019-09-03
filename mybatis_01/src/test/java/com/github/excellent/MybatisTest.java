@@ -40,13 +40,32 @@ public class MybatisTest{
     }
     @Test
     public void test2(){
-        SqlSession sqlSession = factory.openSession();
-        AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
-        List<Account> list = mapper.select();
-        for(Account account1 : list){
+        SqlSession sqlSession1 = factory.openSession();
+        SqlSession sqlSession2 = factory.openSession();
+        SqlSession sqlSession3 = factory.openSession();
+        System.out.println("第一次查询：");
+        AccountMapper mapper1 = sqlSession1.getMapper(AccountMapper.class);
+        List<Account> list1 = mapper1.select();
+        for(Account account1 : list1){
             System.out.println(account1);
         }
-        sqlSession.close();
+        sqlSession1.close();
+        System.out.println("第二次查询：");
+
+        AccountMapper mapper2 = sqlSession2.getMapper(AccountMapper.class);
+        List<Account> list2 = mapper2.select();
+        for(Account account1 : list2){
+            System.out.println(account1);
+        }
+
+        System.out.println("第三次查询：");
+
+        AccountMapper mapper3 = sqlSession3.getMapper(AccountMapper.class);
+        List<Account> list3 = mapper3.select();
+        for(Account account1 : list3){
+            System.out.println(account1);
+        }
+
     }
 
     @Test
@@ -54,6 +73,10 @@ public class MybatisTest{
         SqlSession sqlSession = factory.openSession();
         AccountMapper mapper = sqlSession.getMapper(AccountMapper.class);
         Account account = mapper.selectById(2);
+        System.out.println(account);
+        System.out.println("============================");
+        AccountMapper mapper1 = sqlSession.getMapper(AccountMapper.class);
+        Account account1 = mapper1.selectById(2);
         System.out.println(account);
         sqlSession.close();
     }

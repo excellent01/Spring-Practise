@@ -25,6 +25,9 @@
         <property name="prefix" value="/jsp/"/>
     </bean>
 
+    <bean class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
+
+
     <!--配置自定义的类型转换器-->
     <bean id="convert" class="org.springframework.context.support.ConversionServiceFactoryBean">
         <property name="converters">

@@ -1,5 +1,4 @@
 package com.github.excellent;
-
 import com.github.excellent.dao.User;
 import com.github.excellent.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;

@@ -15,9 +15,14 @@
             <param-value>classpath:*.xml</param-value>
         </init-param>
 
+        <multipart-config>
+
+        </multipart-config>
     </servlet>
 
-    <!--将前端控制器映射到/-->
+
+
+    <!--将前端控制器映射到/,指明该控制器处理哪些url-->
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
         <url-pattern>/</url-pattern>

@@ -12,7 +12,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("aop.xml");
-        //context = new AnnotationConfigApplicationContext();
         RealSubject realSubject = (RealSubject) context.getBean("realSubject");
         realSubject.work1();
         realSubject.work2();

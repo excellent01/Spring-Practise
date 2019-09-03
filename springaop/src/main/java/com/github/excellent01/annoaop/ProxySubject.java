@@ -18,7 +18,6 @@ import java.lang.reflect.Proxy;
  */
 @Aspect
 @Component(value = "proxySubject")
-//@Configuration
 public class ProxySubject  {
 
     /**
