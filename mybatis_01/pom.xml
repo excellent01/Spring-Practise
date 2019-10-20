@@ -12,7 +12,7 @@
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-        <!--假如mybatisy依赖-->
+        <!--假入mybatisy依赖-->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>

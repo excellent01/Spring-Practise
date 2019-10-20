@@ -13,13 +13,13 @@
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 
     <!--配置目标对象，被增强的对象-->
-    <bean id="user" class="com.github.excellent01.aop.UserImpl"/>
+    <bean id="user" class="com.github.excellent01.a.aop.UserImpl"/>
     <!--配置切面类-->
-    <bean id="aspect" class="com.github.excellent01.aop.MyAspect"/>
+    <bean id="aspect" class="com.github.excellent01.a.aop.MyAspect"/>
 
     <aop:config>
         <aop:pointcut id="pointcut1"
-                      expression="execution(* com.github.excellent01.aop.UserImpl.add*(..)))"/>
+                      expression="execution(* com.github.excellent01.a.aop.UserImpl.add*(..)))"/>
         <aop:aspect ref="aspect">
             <aop:after-returning method="checkPri" pointcut-ref="pointcut1"/>
         </aop:aspect>

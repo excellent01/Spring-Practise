@@ -13,8 +13,8 @@
 
 
     <!--??????-->
-    <bean id="user" class="com.github.excellent01.annotationaop.User"/>
+    <bean id="user" class="com.github.excellent01.a.annotationaop.User"/>
 
     <!--?????-->
-    <bean id="aspect" class="com.github.excellent01.annotationaop.MyAspect"/>
+    <bean id="aspect" class="com.github.excellent01.a.annotationaop.MyAspect"/>
 </beans>

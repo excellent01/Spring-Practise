@@ -9,14 +9,13 @@
 
     <aop:aspectj-autoproxy/>
 
-    <aop:aspectj-autoproxy proxy-target-class="true"/>
 
 
-    <bean id="real" class="com.github.excellent01.xmlaop.RealSubject">
+    <bean id="real" class="com.github.excellent01.a.xmlaop.RealSubject">
 
     </bean>
 
-    <bean id="proxy" class="com.github.excellent01.xmlaop.ProxySubject">
+    <bean id="proxy" class="com.github.excellent01.a.xmlaop.ProxySubject">
 
     </bean>
 

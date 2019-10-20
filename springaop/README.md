@@ -19,4 +19,4 @@
  
  - [访问修饰符] 方法返回值 包名.类名.方法名(参数)
  - public void com.github.excellent01.Useimpl(..)
- -  expression="execution(* com.github.excellent01.aop.UserImpl.*(..)))
+ -  expression="execution(* com.github.excellent01.a.aop.UserImpl.*(..)))

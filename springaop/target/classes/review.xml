@@ -10,16 +10,16 @@
     <aop:aspectj-autoproxy/>
 
     <!--注册真实类-->
-    <bean id="user" class="com.github.excellent01.review.xml.User"/>
+    <bean id="user" class="com.github.excellent01.a.review.xml.User"/>
 
     <!--配置切面类-->
-    <bean id="MyAspect" class="com.github.excellent01.review.xml.MyAspect"/>
+    <bean id="MyAspect" class="com.github.excellent01.a.review.xml.MyAspect"/>
 
     <aop:config>
         <aop:pointcut id="pointcut"
-                      expression="execution(* com.github.excellent01.review.xml.User.*(..))"/>
+                      expression="execution(* com.github.excellent01.a.review.xml.User.*(..))"/>
         <aop:pointcut id="pointcut1"
-                      expression="execution(* com.github.excellent01.review.xml.User.*(..))"/>
+                      expression="execution(* com.github.excellent01.a.review.xml.User.*(..))"/>
         <aop:aspect ref="MyAspect">
             <aop:before method="before" pointcut-ref="pointcut"/>
             <aop:after method="after" pointcut-ref="pointcut1"/>

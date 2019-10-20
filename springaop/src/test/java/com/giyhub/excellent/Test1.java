@@ -1,5 +1,5 @@
 package com.giyhub.excellent;
-import com.github.excellent01.annotationaop.User;
+import com.github.excellent01.a.annotationaop.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

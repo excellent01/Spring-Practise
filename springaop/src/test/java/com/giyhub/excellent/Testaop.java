@@ -1,6 +1,6 @@
 package com.giyhub.excellent;
 
-import com.github.excellent01.aop.UserImpl;
+import com.github.excellent01.a.aop.UserImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

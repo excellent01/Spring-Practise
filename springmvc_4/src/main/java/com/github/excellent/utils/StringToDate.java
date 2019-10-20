@@ -6,7 +6,6 @@ import org.springframework.core.convert.converter.Converter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
 /**
  * 字符串转换为日期
@@ -28,12 +27,4 @@ public class StringToDate implements Converter<String,Date> {
         }
         return date;
     }
-
-    public static <W>void method(W t)
-    {
-        System.out.println("method: "+t);
-    }
-
-
-
 }

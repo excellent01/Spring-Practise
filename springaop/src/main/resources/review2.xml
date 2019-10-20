@@ -9,9 +9,9 @@
 
     <aop:aspectj-autoproxy/>
 
-    <bean id="user" class="com.github.excellent01.review.anno.User"/>
+    <bean id="user" class="com.github.excellent01.a.review.anno.User"/>
 
-    <bean id="aspect" class="com.github.excellent01.review.anno.MyAspect"/>
+    <bean id="aspect" class="com.github.excellent01.a.review.anno.MyAspect"/>
 
 
 </beans>
